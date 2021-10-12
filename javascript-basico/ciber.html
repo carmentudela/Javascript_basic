@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript bàsic</title>
+    <script>
+        // EXERCICI 1
+        console.log("Hola Mundo");
+
+        // EXERCICI 2
+        alert("¡Me llamo Carmen!");
+
+        // EXERCICI 3
+        var nombre = "Carmen";
+        var apellido = "Tudela";
+        console.log(nombre + " " + apellido);
+
+        // EXERCICI 4
+        var num1 = 23;
+        var num2 = 35;
+        var suma = num1 + num2;
+        console.log("La suma de " + num1 + " y " + num2 + " es igual a " + suma);
+
+        // EXERCICI 5
+        var nota_examen = 2;
+        if (nota_examen >= 5) { alert("¡Enhorabuena! Has aprobado el examen con un " + nota_examen + " !") }
+        else { alert("Deberías estudiar más, has suspendido con un " + nota_examen) }
+
+
+        // EXERCICI 6
+
+        var texto = ["Tinc", "un", "cotxe", "de", "color", "verd"];
+        document.write(texto.join(" ") + "</br>");
+        const indice = texto.indexOf("verd");
+        texto[indice] = "blau";
+        document.write(texto.join(" ") + "</br>");
+
+
+        texto.forEach(function (item, i) {
+            return texto[i] = item.replace(/o/g, 'u');
+        });
+        document.write(texto.join(" ") + "</br>");
+
+        // EXERCICI 7
+
+        var objectes = ['taula', 'cadira', 'ordinador', 'llibreta'];
+        for (i = 0; i < objectes.length; i++) {
+            document.write("L'objecte " + objectes[i] + " està a la posició " + i + ". </br>");
+        }
+        // EXERCICI 8
+
+
+
+        var num1 = prompt("Introdueix el primer número:");
+        num1 = parseInt(num1);
+        var num2 = prompt("Introdueix el segon número:");
+        num2 = parseInt(num2);
+        var operador = prompt("Vols sumar, restar o multiplicar?");
+        function calculadora(operador, num1, num2) {
+            var resultado = 0;
+            switch (operador) {
+                case "sumar": resultado = num1 + num2;
+                    alert("El resultat de la suma es: " + resultado);
+                    break;
+                case "restar": resultado = num1 - num2;
+                    alert("El resultat de la resta es: " + resultado);
+                    break;
+                case "multiplicar": resultado = num1 * num2;
+                    alert("El resultat de la multiplicació es: " + resultado);
+                    break;
+
+            }
+
+        }
+
+        calculadora(operador, num1, num2);
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
